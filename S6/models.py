@@ -9,7 +9,6 @@ class Specialty(Model):
     class Meta:
         database = db
 
-
 class FGOS(Model):
     code = CharField(unique=True)
 
@@ -24,12 +23,10 @@ class SpecialtyFGOS(Model):
     class Meta:
         database = db
 
-
 def init_db():
     db.connect()
     db.create_tables([Specialty, FGOS, SpecialtyFGOS], safe=True)
     db.close()
-
 
 if __name__ == "__main__":
     init_db()

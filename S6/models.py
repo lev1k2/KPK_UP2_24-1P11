@@ -23,9 +23,6 @@ class SpecialtyFGOS(Model):
 
     class Meta:
         database = db
-        indexes = (
-            (('specialty', 'fgos'), True),
-        )
 
 
 def init_db():
